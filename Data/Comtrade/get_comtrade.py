@@ -284,7 +284,7 @@ def query_comtrade(
     crosswalk_dict = pd.Series(crosswalk.ISO3.values, index=crosswalk.UN).to_dict()
 
     # Get data availability from Comtrade and compare to desired data
-    data_availability_url = urlopen(
+    data_availability_url = urllib.request.urlopen(
         "http://comtrade.un.org/api/refs/da/view?type=C&freq=all&ps=all&px=HS"
     )
     data_availability_raw = json.loads(data_availability_url.read().decode())
