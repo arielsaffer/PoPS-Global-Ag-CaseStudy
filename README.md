@@ -1,10 +1,5 @@
-![CI](https://github.com/ncsu-landscape-dynamics/Pandemic_Model/workflows/CI/badge.svg)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-
-# PoPS Global 
-## Agricultural Pest/Pathogen Case Study
-
-Running model with agricultural pathogen maize lethal necrosis (MLN)
+# Data Exploration for PoPS Global 
+... to apply to agricultural pest/pathogen case studies
 
 Points to explore:
 
@@ -12,19 +7,11 @@ Points to explore:
 - Traded commodities as agricultural inputs (vs. human consumption)
 - Asynchrony of entry and establishment
 - Annual vs. monthly model run 
+- Assess viability of candidate case studies
 
-## Virtual Environment
-We are using Pipenv for our virtual environment. To use, install on your system:
-```
-pip install pipenv
-```
-To run use
-```
-pipenv install
-pipenv shell
-```
-To install a new package
-```
-pipenv install "some package"
-```
+## Notebooks
 
+ - **MonthlyCropHost**: methods to incorporate a "crop calendar" and EarthStat data layers to allow for spatially variable host presence 
+ - **AnnualExploration**: assess how running PoPS Global on annual vs. monthly time steps affects the selection and calibration of the *lamda* and *alpha* parameters, using simulated data.
+ - **FaoData**: calculate portion of crop/crop group using FAO data and classifications - as data for host percent area or *lamda weight*
+ - **StatisticalModel**: exploratory data anlysis using simplified model inputs to aid in pathway, driver, and case study selection 
